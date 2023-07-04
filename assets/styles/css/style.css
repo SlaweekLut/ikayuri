@@ -4181,6 +4181,8 @@ span {
 
 .intro {
   background-color: var(--primary);
+  position: relative;
+  overflow: hidden;
 }
 .intro-top {
   padding: 12px 0px;
@@ -4252,6 +4254,8 @@ span {
   display: none;
 }
 .intro-content {
+  position: relative;
+  z-index: 1;
   padding: 102px 0px 250px;
   background: url("../../images/intro-background.jpg") no-repeat;
   background-position: 50% bottom;
@@ -4280,6 +4284,21 @@ span {
   font-size: 16px;
   font-weight: 300;
   line-height: 1.6;
+}
+.intro__decor {
+  position: absolute;
+}
+.intro__decor--1 {
+  bottom: 0;
+  right: 0;
+}
+.intro__decor--2 {
+  bottom: 0;
+  left: 0;
+}
+.intro__decor--3 {
+  left: 0;
+  bottom: 0;
 }
 @media (max-width: 991.98px) {
   .intro-top {
@@ -4339,6 +4358,9 @@ span {
     font-size: 13px;
   }
   .intro-content__subtitle br:nth-child(2) {
+    display: none;
+  }
+  .intro__decor {
     display: none;
   }
 }
@@ -4818,6 +4840,9 @@ span {
   pointer-events: none;
 }
 
+.weekend {
+  overflow: hidden;
+}
 .weekend__video {
   height: 530px;
   background: #000;
@@ -5230,6 +5255,10 @@ span {
 .kids__item svg {
   min-width: 52px;
 }
+.kids .container {
+  z-index: 1;
+  position: relative;
+}
 .kids .section__header svg {
   width: 100%;
 }
@@ -5384,9 +5413,26 @@ span {
 }
 
 .faq {
-  background: url(../../images/faq-background.jpg) no-repeat;
+  background: var(--primary);
   background-size: cover;
   padding: 80px 0;
+  overflow: hidden;
+  position: relative;
+}
+.faq__decor {
+  position: absolute;
+}
+.faq__decor--1 {
+  left: 0;
+  bottom: 0;
+}
+.faq__decor--2 {
+  right: 0;
+  top: 0;
+}
+.faq .container {
+  z-index: 1;
+  position: relative;
 }
 .faq__list {
   gap: 8px;
@@ -6080,10 +6126,20 @@ span {
   padding-top: 80px;
   padding-bottom: 120px;
   margin-top: 0;
-  background: url("../../images/contacts-bg.jpg") no-repeat;
   background-color: #C84033;
-  background-size: auto 100%;
-  background-position: max(50vw, 100%) top;
+  position: relative;
+  overflow: hidden;
+}
+.contacts .container {
+  position: relative;
+  z-index: 1;
+}
+.contacts__decor {
+  position: absolute;
+  top: 0;
+  left: max(50vw, auto);
+  right: 0;
+  height: 100%;
 }
 .contacts .section__title, .contacts .section__subtitle {
   color: white;
@@ -6093,6 +6149,12 @@ span {
     padding-bottom: 402px;
     background-size: auto 530px;
     background-position: center bottom;
+  }
+  .contacts__decor {
+    left: calc(50vw - 313px);
+    height: 530px;
+    top: unset;
+    bottom: 0;
   }
 }
 
