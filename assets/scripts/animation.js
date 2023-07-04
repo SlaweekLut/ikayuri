@@ -60,7 +60,6 @@ gsap.to(".faq__decor--2", {
 	},
 	y: '+=40%',
 	filter: 'blur(5px)',
-	ease: 'power3'
 })
 
 gsap.to(".faq__decor--1", {
